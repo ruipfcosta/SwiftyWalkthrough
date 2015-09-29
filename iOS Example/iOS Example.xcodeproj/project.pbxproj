@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B3D23CB11BB99F1D00A13396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CB01BB99F1D00A13396 /* AppDelegate.swift */; };
-		B3D23CB31BB99F1D00A13396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CB21BB99F1D00A13396 /* ViewController.swift */; };
+		B3D23CB31BB99F1D00A13396 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CB21BB99F1D00A13396 /* HomeViewController.swift */; };
 		B3D23CB61BB99F1D00A13396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D23CB41BB99F1D00A13396 /* Main.storyboard */; };
 		B3D23CB81BB99F1D00A13396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D23CB71BB99F1D00A13396 /* Assets.xcassets */; };
 		B3D23CBB1BB99F1D00A13396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D23CB91BB99F1D00A13396 /* LaunchScreen.storyboard */; };
 		B3D23CC61BB99F1D00A13396 /* iOS_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CC51BB99F1D00A13396 /* iOS_ExampleTests.swift */; };
 		B3D23CD11BB99F1D00A13396 /* iOS_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CD01BB99F1D00A13396 /* iOS_ExampleUITests.swift */; };
+		B3D23CF01BBA96FF00A13396 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CEF1BBA96FF00A13396 /* ProfileViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B3D23CF21BBA987A00A13396 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CF11BBA987A00A13396 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B3D23CF71BBAA16600A13396 /* SwiftyWalkthrough.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */; };
+		B3D23CF81BBAA16600A13396 /* SwiftyWalkthrough.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +37,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B3D23CF91BBAA16600A13396 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B3D23CF81BBAA16600A13396 /* SwiftyWalkthrough.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B3D23CAD1BB99F1D00A13396 /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23CB01BB99F1D00A13396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3D23CB21BB99F1D00A13396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3D23CB21BB99F1D00A13396 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B3D23CB51BB99F1D00A13396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3D23CB71BB99F1D00A13396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D23CBA1BB99F1D00A13396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +65,10 @@
 		B3D23CCC1BB99F1D00A13396 /* iOS ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23CD01BB99F1D00A13396 /* iOS_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExampleUITests.swift; sourceTree = "<group>"; };
 		B3D23CD21BB99F1D00A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D23CED1BBA946600A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyWalkthrough.framework; path = "../build/Debug-iphoneos/SwiftyWalkthrough.framework"; sourceTree = "<group>"; };
+		B3D23CEF1BBA96FF00A13396 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B3D23CF11BBA987A00A13396 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyWalkthrough.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyWalkthrough-gcligpbvoabhnmfvxbvklilfqpdi/Build/Products/Debug-iphoneos/SwiftyWalkthrough.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D23CF71BBAA16600A13396 /* SwiftyWalkthrough.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +100,8 @@
 		B3D23CA41BB99F1D00A13396 = {
 			isa = PBXGroup;
 			children = (
+				B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */,
+				B3D23CED1BBA946600A13396 /* SwiftyWalkthrough.framework */,
 				B3D23CAF1BB99F1D00A13396 /* iOS Example */,
 				B3D23CC41BB99F1D00A13396 /* iOS ExampleTests */,
 				B3D23CCF1BB99F1D00A13396 /* iOS ExampleUITests */,
@@ -98,7 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				B3D23CB01BB99F1D00A13396 /* AppDelegate.swift */,
-				B3D23CB21BB99F1D00A13396 /* ViewController.swift */,
+				B3D23CB21BB99F1D00A13396 /* HomeViewController.swift */,
+				B3D23CEF1BBA96FF00A13396 /* ProfileViewController.swift */,
+				B3D23CF11BBA987A00A13396 /* SettingsViewController.swift */,
 				B3D23CB41BB99F1D00A13396 /* Main.storyboard */,
 				B3D23CB71BB99F1D00A13396 /* Assets.xcassets */,
 				B3D23CB91BB99F1D00A13396 /* LaunchScreen.storyboard */,
@@ -135,6 +162,7 @@
 				B3D23CA91BB99F1D00A13396 /* Sources */,
 				B3D23CAA1BB99F1D00A13396 /* Frameworks */,
 				B3D23CAB1BB99F1D00A13396 /* Resources */,
+				B3D23CF91BBAA16600A13396 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D23CB31BB99F1D00A13396 /* ViewController.swift in Sources */,
+				B3D23CF01BBA96FF00A13396 /* ProfileViewController.swift in Sources */,
+				B3D23CB31BB99F1D00A13396 /* HomeViewController.swift in Sources */,
 				B3D23CB11BB99F1D00A13396 /* AppDelegate.swift in Sources */,
+				B3D23CF21BBA987A00A13396 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +513,7 @@
 				B3D23CD71BB99F1D00A13396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3D23CD81BB99F1D00A13396 /* Build configuration list for PBXNativeTarget "iOS ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +522,7 @@
 				B3D23CDA1BB99F1D00A13396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3D23CDB1BB99F1D00A13396 /* Build configuration list for PBXNativeTarget "iOS ExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +531,7 @@
 				B3D23CDD1BB99F1D00A13396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
