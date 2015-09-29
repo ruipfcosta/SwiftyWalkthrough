@@ -17,7 +17,11 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
 @objc public class WalkthroughView: UIView {
     
     var availableViews: [ViewDescriptor] = []
-    var dimColor: CGColor = defaultDimColor
+    public var dimColor: CGColor = defaultDimColor {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     public weak var delegate: WalkthroughViewDelegate?
     
@@ -128,17 +132,17 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
         }
     }
     
-    public func cutHolesForViews(views: [ViewDescriptor]) {
-        cutHolesForViews(views, usingDimColor: dimColor)
+    public func cutHolesForViews(views: [UIView]) {
+        cutHolesForViewDescriptors(views.map { ViewDescriptor(view: $0) })
     }
     
-    public func cutHolesForViews(views: [ViewDescriptor], usingDimColor tempColor: CGColor) {
+    public func cutHolesForViewDescriptors(views: [ViewDescriptor]) {
         availableViews = views
-        dimColor = tempColor
         setNeedsDisplay()
     }
     
     public func removeAllHoles() {
-        cutHolesForViews([], usingDimColor: dimColor)
+        cutHolesForViewDescriptors([])
     }
+    
 }
