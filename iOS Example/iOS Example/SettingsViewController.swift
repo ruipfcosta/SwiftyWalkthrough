@@ -24,7 +24,7 @@ class SettingsViewController: UIViewController {
         walkthroughActive = attachToOnBoarding()
         
         if walkthroughActive {
-            walkthroughView?.cutHoleForView(ViewDescriptor(view: segmented))
+            walkthroughView?.cutHolesForViews([segmented])
         }
         
         // Disable navigation controller back swipe gesture
@@ -47,12 +47,12 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
-        walkthroughView?.cutHolesForViews([ViewDescriptor(view: slider)])
+        walkthroughView?.cutHolesForViews([slider])
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         if sender.value == sender.maximumValue {
-            walkthroughView?.cutHolesForViews([ViewDescriptor(view: switchView)])
+            walkthroughView?.cutHolesForViews([switchView])
         }
     }
     

@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var showProfileButton: UIButton!
     @IBOutlet weak var showSettingsButton: UIBarButtonItem!
     
+    static var walkthroughDimColor = UIColor.blackColor().colorWithAlphaComponent(0.5).CGColor
     lazy var walkthroughView: WalkthroughView = self.makeWalkthroughView()
     
     override func viewDidLoad() {
@@ -37,17 +38,16 @@ class HomeViewController: UIViewController {
                 ViewDescriptor(view: showSettingsButton.valueForKey("view") as! UIView, extraPaddingX: 5, extraPaddingY: 0, cornerRadius: 10)
             ]
             
-            walkthroughView.cutHolesForViews(descriptors)
+            walkthroughView.cutHolesForViewDescriptors(descriptors)
         } else if !profileWalkthroughComplete {
             walkthroughView.hidden = false
-            walkthroughView.cutHoleForView(ViewDescriptor(view: showProfileButton, extraPaddingX: 20, extraPaddingY: 10, cornerRadius: 10))
+            walkthroughView.cutHolesForViewDescriptors([ViewDescriptor(view: showProfileButton, extraPaddingX: 20, extraPaddingY: 10, cornerRadius: 10)])
         } else if !settingsWalkthroughComplete {
             walkthroughView.hidden = false
-            walkthroughView.cutHoleForView(ViewDescriptor(view: showSettingsButton.valueForKey("view") as! UIView, extraPaddingX: 5, extraPaddingY: 0, cornerRadius: 10))
+            walkthroughView.cutHolesForViewDescriptors([ViewDescriptor(view: showSettingsButton.valueForKey("view") as! UIView, extraPaddingX: 5, extraPaddingY: 0, cornerRadius: 10)])
         } else {
             walkthroughView.hidden = true
             walkthroughView.removeFromSuperview()
-            print("Congratulations, walkthrough complete!")
             
             let alert = UIAlertController(title: "Congratulations", message: "All tutorials are now complete (restart the app to repeat)!", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
@@ -57,6 +57,7 @@ class HomeViewController: UIViewController {
     
     func makeWalkthroughView() -> WalkthroughView {
         let v = WalkthroughView()
+        v.dimColor = HomeViewController.walkthroughDimColor
         v.translatesAutoresizingMaskIntoConstraints = false
         v.hidden = true
         
@@ -77,6 +78,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func profilePressed(sender: AnyObject) {
+        walkthroughView.dimColor = ProfileViewController.walkthroughDimColor
         walkthroughView.removeAllHoles()
         performSegueWithIdentifier("profileSegue", sender: sender)
     }

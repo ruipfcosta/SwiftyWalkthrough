@@ -16,9 +16,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var surnameField: UITextField!
     @IBOutlet weak var addressField: UITextField!
     
+    static var walkthroughDimColor = UIColor.redColor().colorWithAlphaComponent(0.7).CGColor
     var walkthroughView: WalkthroughView?
     var walkthroughActive = false
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +34,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         walkthroughActive = attachToWalkthrough()
         
         if walkthroughActive {
-            walkthroughView?.cutHoleForView(ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80))
+            walkthroughView?.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
         }
         
         // Disable navigation controller back swipe gesture
@@ -57,7 +58,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func onTapImage(sender: UITapGestureRecognizer) {
         if walkthroughActive {
-            walkthroughView?.cutHolesForViews([ViewDescriptor(view: nameField)])
+            walkthroughView?.cutHolesForViews([nameField])
         }
     }
     
@@ -77,10 +78,11 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         if textField == nameField {
-            walkthroughView?.cutHolesForViews([ViewDescriptor(view: surnameField)])
+            walkthroughView?.cutHolesForViews([surnameField])
         } else if textField == surnameField {
-            walkthroughView?.cutHolesForViews([ViewDescriptor(view: addressField)])
+            walkthroughView?.cutHolesForViews([addressField])
         } else if textField == addressField {
+            walkthroughView?.dimColor = HomeViewController.walkthroughDimColor
             walkthroughView?.removeAllHoles()
             
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "profileWalkthroughComplete")
