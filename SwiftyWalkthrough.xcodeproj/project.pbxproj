@@ -10,6 +10,8 @@
 		B3D23C891BB99B3100A13396 /* SwiftyWalkthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D23C881BB99B3100A13396 /* SwiftyWalkthrough.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B3D23C901BB99B3100A13396 /* SwiftyWalkthrough.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */; settings = {ASSET_TAGS = (); }; };
 		B3D23C951BB99B3100A13396 /* SwiftyWalkthroughTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */; };
+		B3D23CA01BB99B7200A13396 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */; settings = {ASSET_TAGS = (); }; };
+		B3D23CA21BB99BB300A13396 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B3D23C8F1BB99B3100A13396 /* SwiftyWalkthroughTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyWalkthroughTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyWalkthroughTests.swift; sourceTree = "<group>"; };
 		B3D23C961BB99B3100A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				B3D23C881BB99B3100A13396 /* SwiftyWalkthrough.h */,
 				B3D23C8A1BB99B3100A13396 /* Info.plist */,
+				B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */,
+				B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */,
 			);
 			path = SwiftyWalkthrough;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 		B3D23C7C1BB99B3100A13396 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Rui Costa";
 				TargetAttributes = {
@@ -193,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D23CA01BB99B7200A13396 /* WalkthroughView.swift in Sources */,
+				B3D23CA21BB99BB300A13396 /* ViewDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +316,7 @@
 		B3D23C9A1BB99B3100A13396 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +327,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pt.ruicosta.SwiftyWalkthrough;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B3D23C9B1BB99B3100A13396 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -375,6 +387,7 @@
 				B3D23C9B1BB99B3100A13396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3D23C9C1BB99B3100A13396 /* Build configuration list for PBXNativeTarget "SwiftyWalkthroughTests" */ = {
 			isa = XCConfigurationList;
@@ -383,6 +396,7 @@
 				B3D23C9E1BB99B3100A13396 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
