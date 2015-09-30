@@ -12,6 +12,7 @@
 		B3D23C951BB99B3100A13396 /* SwiftyWalkthroughTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */; };
 		B3D23CA01BB99B7200A13396 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */; settings = {ASSET_TAGS = (); }; };
 		B3D23CA21BB99BB300A13396 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */; settings = {ASSET_TAGS = (); }; };
+		B3D23CF41BBA99B400A13396 /* UIViewController+Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CF31BBA99B400A13396 /* UIViewController+Walkthrough.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		B3D23C961BB99B3100A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
+		B3D23CF31BBA99B400A13396 /* UIViewController+Walkthrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Walkthrough.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,6 @@
 			children = (
 				B3D23C871BB99B3100A13396 /* SwiftyWalkthrough */,
 				B3D23C931BB99B3100A13396 /* SwiftyWalkthroughTests */,
-				B3D23C861BB99B3100A13396 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +71,7 @@
 				B3D23C8F1BB99B3100A13396 /* SwiftyWalkthroughTests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B3D23C871BB99B3100A13396 /* SwiftyWalkthrough */ = {
@@ -79,6 +81,7 @@
 				B3D23C8A1BB99B3100A13396 /* Info.plist */,
 				B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */,
 				B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */,
+				B3D23CF31BBA99B400A13396 /* UIViewController+Walkthrough.swift */,
 			);
 			path = SwiftyWalkthrough;
 			sourceTree = "<group>";
@@ -86,6 +89,7 @@
 		B3D23C931BB99B3100A13396 /* SwiftyWalkthroughTests */ = {
 			isa = PBXGroup;
 			children = (
+				B3D23C861BB99B3100A13396 /* Products */,
 				B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */,
 				B3D23C961BB99B3100A13396 /* Info.plist */,
 			);
@@ -201,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D23CA01BB99B7200A13396 /* WalkthroughView.swift in Sources */,
+				B3D23CF41BBA99B400A13396 /* UIViewController+Walkthrough.swift in Sources */,
 				B3D23CA21BB99BB300A13396 /* ViewDescriptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +328,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SwiftyWalkthrough/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pt.ruicosta.SwiftyWalkthrough;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -341,6 +347,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SwiftyWalkthrough/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pt.ruicosta.SwiftyWalkthrough;
 				PRODUCT_NAME = "$(TARGET_NAME)";
