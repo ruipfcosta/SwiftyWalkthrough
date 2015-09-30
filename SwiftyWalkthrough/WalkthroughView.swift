@@ -11,7 +11,7 @@ import Foundation
 private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).CGColor
 
 @objc public protocol WalkthroughViewDelegate {
-    func willInteractWithView(view: UIView)
+    optional func willInteractWithView(view: UIView)
 }
 
 @objc public class WalkthroughView: UIView {
@@ -75,7 +75,7 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
             let convertedPoint = currentView.convertPoint(point, fromView: self)
             
             if currentView.pointInside(convertedPoint, withEvent: event) {
-                delegate?.willInteractWithView(currentView)
+                delegate?.willInteractWithView?(currentView)
                 return currentView.hitTest(convertedPoint, withEvent: event)
             }
         }
