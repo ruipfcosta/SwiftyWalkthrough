@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController: WalkthroughViewDelegate {
 
-    var rootController: UIViewController? { return UIApplication.sharedApplication().keyWindow?.rootViewController }
+    public var rootController: UIViewController? { return UIApplication.sharedApplication().delegate?.window??.rootViewController }
     
     public var walkthroughView: WalkthroughView? { return attachToWalkthrough() }
     
