@@ -17,9 +17,18 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addressField: UITextField!
     
     static var walkthroughDimColor = UIColor.redColor().colorWithAlphaComponent(0.7).CGColor
-    var walkthroughView: WalkthroughView?
-    var walkthroughActive = false
-        
+    
+    var customizedSubview: CustomWalkthroughSubview? {
+        if let subviews = walkthroughView?.subviews {
+            for subview in subviews {
+                if let customized = subview as? CustomWalkthroughSubview {
+                    return customized
+                }
+            }
+        }
+        return .None
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,35 +40,29 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        walkthroughActive = attachToWalkthrough()
-        
-        if walkthroughActive {
-            walkthroughView?.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
+        if let wt = attachToWalkthrough() {
+            wt.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
+            navigationController?.interactivePopGestureRecognizer?.enabled = false
+            
+            customizedSubview?.helpLabel.hidden = false
+            customizedSubview?.helpLabel.backgroundColor = UIColor.blueColor()
+            customizedSubview?.helpLabel.text = "Ok, lets play with the colors! By the way, tap the image to start."
+            customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
+            
+        } else {
+            navigationController?.interactivePopGestureRecognizer?.enabled = true
         }
-        
-        // Disable navigation controller back swipe gesture
-        if let recognizer = navigationController?.interactivePopGestureRecognizer {
-            recognizer.enabled = !walkthroughActive
-        }
-    }
-    
-    func attachToWalkthrough() -> Bool {
-        if let navSubviews = navigationController?.view.subviews {
-            for navSub in navSubviews {
-                if let navSub = navSub as? WalkthroughView {
-                    walkthroughView = navSub
-                    return true
-                }
-            }
-        }
-        
-        return false
     }
     
     @IBAction func onTapImage(sender: UITapGestureRecognizer) {
-        if walkthroughActive {
-            walkthroughView?.cutHolesForViews([nameField])
-        }
+        walkthroughView?.cutHolesForViews([nameField])
+        walkthroughView?.dimColor = UIColor.blueColor().colorWithAlphaComponent(0.5).CGColor
+        
+        customizedSubview?.helpLabel.backgroundColor = UIColor.blackColor()
+        customizedSubview?.helpLabel.text = "Now tell us your name"
+        customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
+        
+        nameField.becomeFirstResponder()
     }
     
     // MARK: - UITextFieldDelegate
@@ -79,11 +82,20 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(textField: UITextField) {
         if textField == nameField {
             walkthroughView?.cutHolesForViews([surnameField])
+            customizedSubview?.helpLabel.text = "... and the surname"
+            customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: 60, width: 300, height: 80)
+            
+            surnameField.becomeFirstResponder()
         } else if textField == surnameField {
             walkthroughView?.cutHolesForViews([addressField])
+            walkthroughView?.dimColor = ProfileViewController.walkthroughDimColor
+            customizedSubview?.helpLabel.text = "... and finally your address!"
+            
+            addressField.becomeFirstResponder()
         } else if textField == addressField {
             walkthroughView?.dimColor = HomeViewController.walkthroughDimColor
             walkthroughView?.removeAllHoles()
+            customizedSubview?.helpLabel.hidden = true
             
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "profileWalkthroughComplete")
             navigationController?.popToRootViewControllerAnimated(true)

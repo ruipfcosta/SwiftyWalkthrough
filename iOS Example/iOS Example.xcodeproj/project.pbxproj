@@ -18,6 +18,7 @@
 		B3D23CF21BBA987A00A13396 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CF11BBA987A00A13396 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B3D23CF71BBAA16600A13396 /* SwiftyWalkthrough.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */; };
 		B3D23CF81BBAA16600A13396 /* SwiftyWalkthrough.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B3D23CFB1BBBEB6000A13396 /* CustomWalkthroughSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CFA1BBBEB6000A13396 /* CustomWalkthroughSubview.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +66,10 @@
 		B3D23CCC1BB99F1D00A13396 /* iOS ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23CD01BB99F1D00A13396 /* iOS_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_ExampleUITests.swift; sourceTree = "<group>"; };
 		B3D23CD21BB99F1D00A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3D23CED1BBA946600A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyWalkthrough.framework; path = "../build/Debug-iphoneos/SwiftyWalkthrough.framework"; sourceTree = "<group>"; };
 		B3D23CEF1BBA96FF00A13396 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B3D23CF11BBA987A00A13396 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyWalkthrough.framework; path = "../../../../Library/Developer/Xcode/DerivedData/SwiftyWalkthrough-gcligpbvoabhnmfvxbvklilfqpdi/Build/Products/Debug-iphoneos/SwiftyWalkthrough.framework"; sourceTree = "<group>"; };
+		B3D23CFA1BBBEB6000A13396 /* CustomWalkthroughSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomWalkthroughSubview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				B3D23CF51BBAA12600A13396 /* SwiftyWalkthrough.framework */,
-				B3D23CED1BBA946600A13396 /* SwiftyWalkthrough.framework */,
 				B3D23CAF1BB99F1D00A13396 /* iOS Example */,
 				B3D23CC41BB99F1D00A13396 /* iOS ExampleTests */,
 				B3D23CCF1BB99F1D00A13396 /* iOS ExampleUITests */,
@@ -126,6 +126,7 @@
 				B3D23CB21BB99F1D00A13396 /* HomeViewController.swift */,
 				B3D23CEF1BBA96FF00A13396 /* ProfileViewController.swift */,
 				B3D23CF11BBA987A00A13396 /* SettingsViewController.swift */,
+				B3D23CFA1BBBEB6000A13396 /* CustomWalkthroughSubview.swift */,
 				B3D23CB41BB99F1D00A13396 /* Main.storyboard */,
 				B3D23CB71BB99F1D00A13396 /* Assets.xcassets */,
 				B3D23CB91BB99F1D00A13396 /* LaunchScreen.storyboard */,
@@ -284,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D23CF01BBA96FF00A13396 /* ProfileViewController.swift in Sources */,
+				B3D23CFB1BBBEB6000A13396 /* CustomWalkthroughSubview.swift in Sources */,
 				B3D23CB31BB99F1D00A13396 /* HomeViewController.swift in Sources */,
 				B3D23CB11BB99F1D00A13396 /* AppDelegate.swift in Sources */,
 				B3D23CF21BBA987A00A13396 /* SettingsViewController.swift in Sources */,
@@ -429,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.ruicosta.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iOS Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.ruicosta.iOS-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
