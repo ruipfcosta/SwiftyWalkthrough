@@ -23,7 +23,7 @@ SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 
 ##Preview
 
-<iframe src="https://appetize.io/embed/x9m9kxtq0eq6hgr7x4r91t0bgm?device=iphone6plus&scale=50&autoplay=false&orientation=portrait&deviceColor=black" width="345px" height="710px" frameborder="0" scrolling="no"></iframe>
+See a live demo on [Appetize.io](https://appetize.io/embed/x9m9kxtq0eq6hgr7x4r91t0bgm?device=iphone6plus&scale=50&autoplay=false&orientation=portrait&deviceColor=black)
 
 ##Requirements
 
