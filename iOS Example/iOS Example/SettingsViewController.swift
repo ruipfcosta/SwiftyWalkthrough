@@ -31,14 +31,11 @@ class SettingsViewController: UIViewController {
         
         if let wt = attachToWalkthrough() {
             wt.cutHolesForViews([segmented])
-            navigationController?.interactivePopGestureRecognizer?.enabled = false
             
             customizedSubview?.helpLabel.hidden = false
             customizedSubview?.helpLabel.text = "Right, lets change that segmented control value"
             customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
             
-        } else {
-            navigationController?.interactivePopGestureRecognizer?.enabled = true
         }
     }
     

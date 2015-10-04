@@ -42,15 +42,11 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 
         if let wt = attachToWalkthrough() {
             wt.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
-            navigationController?.interactivePopGestureRecognizer?.enabled = false
             
             customizedSubview?.helpLabel.hidden = false
             customizedSubview?.helpLabel.backgroundColor = UIColor.blueColor()
-            customizedSubview?.helpLabel.text = "Ok, lets play with the colors! By the way, tap the image to start."
+            customizedSubview?.helpLabel.text = "Ok, lets play with the colors too! By the way, tap the image to start."
             customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
-            
-        } else {
-            navigationController?.interactivePopGestureRecognizer?.enabled = true
         }
     }
     
@@ -61,8 +57,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         customizedSubview?.helpLabel.backgroundColor = UIColor.blackColor()
         customizedSubview?.helpLabel.text = "Now tell us your name"
         customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
-        
-        nameField.becomeFirstResponder()
     }
     
     // MARK: - UITextFieldDelegate
@@ -84,14 +78,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
             walkthroughView?.cutHolesForViews([surnameField])
             customizedSubview?.helpLabel.text = "... and the surname"
             customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: 60, width: 300, height: 80)
-            
-            surnameField.becomeFirstResponder()
         } else if textField == surnameField {
             walkthroughView?.cutHolesForViews([addressField])
             walkthroughView?.dimColor = ProfileViewController.walkthroughDimColor
             customizedSubview?.helpLabel.text = "... and finally your address!"
-            
-            addressField.becomeFirstResponder()
         } else if textField == addressField {
             walkthroughView?.dimColor = HomeViewController.walkthroughDimColor
             walkthroughView?.removeAllHoles()
