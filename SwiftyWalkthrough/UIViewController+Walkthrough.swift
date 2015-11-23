@@ -14,25 +14,29 @@ extension UIViewController: WalkthroughViewDelegate {
     
     public var walkthroughView: WalkthroughView? { return attachToWalkthrough() }
     
+    public var ongoingWalkthrough: Bool { return walkthroughView != .None }
+    
     public func makeWalkthroughView() -> WalkthroughView {
         let v = WalkthroughView()
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }
     
-    public func startWalkthrough() -> WalkthroughView {
-        if let wt = attachToWalkthrough() {
-            return wt
-        } else {
-            let wt = makeWalkthroughView()
-            let views = ["walkthroughView": wt]
-            
-            rootController?.view.addSubview(wt)
-            rootController?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-            rootController?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-            
-            return wt
+    public func startWalkthrough(walkthroughView: WalkthroughView) {
+        if ongoingWalkthrough {
+            finishWalkthrough()
         }
+        
+        walkthroughView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let views = ["walkthroughView": walkthroughView]
+        
+        rootController?.view.addSubview(walkthroughView)
+        rootController?.view.bringSubviewToFront(walkthroughView)
+        
+        rootController?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        rootController?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        rootController?.view.setNeedsLayout()
     }
     
     public func attachToWalkthrough() -> WalkthroughView? {

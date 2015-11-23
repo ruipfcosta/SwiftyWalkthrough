@@ -17,6 +17,7 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
 @objc public class WalkthroughView: UIView {
     
     var availableViews: [ViewDescriptor] = []
+    
     public var dimColor: CGColor = defaultDimColor {
         didSet {
             setNeedsDisplay()
