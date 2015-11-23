@@ -28,7 +28,7 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
     
     lazy var overlayView: UIView = self.makeOverlay()
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
