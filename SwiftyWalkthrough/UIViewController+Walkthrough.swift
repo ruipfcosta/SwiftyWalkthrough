@@ -20,7 +20,7 @@ extension UIViewController: WalkthroughViewDelegate {
         return v
     }
     
-    public func initWalkthrough() -> WalkthroughView {
+    public func startWalkthrough() -> WalkthroughView {
         if let wt = attachToWalkthrough() {
             return wt
         } else {
