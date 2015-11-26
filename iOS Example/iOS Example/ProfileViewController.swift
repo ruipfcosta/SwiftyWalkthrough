@@ -18,17 +18,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     static var walkthroughDimColor = UIColor.redColor().colorWithAlphaComponent(0.7).CGColor
     
-    var customizedSubview: CustomWalkthroughSubview? {
-        if let subviews = walkthroughView?.subviews {
-            for subview in subviews {
-                if let customized = subview as? CustomWalkthroughSubview {
-                    return customized
-                }
-            }
-        }
-        return .None
-    }
-    
+    var customWalkthroughView: CustomWalkthroughView? { return walkthroughView as? CustomWalkthroughView }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,23 +31,21 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        if let wt = attachToWalkthrough() {
-            wt.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
-            
-            customizedSubview?.helpLabel.hidden = false
-            customizedSubview?.helpLabel.backgroundColor = UIColor.blueColor()
-            customizedSubview?.helpLabel.text = "Ok, lets play with the colors too! By the way, tap the image to start."
-            customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
-        }
+        customWalkthroughView?.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
+        
+        customWalkthroughView?.helpLabel.hidden = false
+        customWalkthroughView?.helpLabel.backgroundColor = UIColor.blueColor()
+        customWalkthroughView?.helpLabel.text = "Ok, lets play with the colors too! Tap the image to start."
+        customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: customWalkthroughView!.center.y + 60, width: 300, height: 80)
     }
     
     @IBAction func onTapImage(sender: UITapGestureRecognizer) {
-        walkthroughView?.cutHolesForViews([nameField])
-        walkthroughView?.dimColor = UIColor.blueColor().colorWithAlphaComponent(0.5).CGColor
+        customWalkthroughView?.cutHolesForViews([nameField])
+        customWalkthroughView?.dimColor = UIColor.blueColor().colorWithAlphaComponent(0.5).CGColor
         
-        customizedSubview?.helpLabel.backgroundColor = UIColor.blackColor()
-        customizedSubview?.helpLabel.text = "Now tell us your name"
-        customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
+        customWalkthroughView?.helpLabel.backgroundColor = UIColor.blackColor()
+        customWalkthroughView?.helpLabel.text = "Now tell us your name"
+        customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: customWalkthroughView!.center.y + 60, width: 300, height: 80)
     }
     
     // MARK: - UITextFieldDelegate
@@ -75,20 +64,23 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(textField: UITextField) {
         if textField == nameField {
-            walkthroughView?.cutHolesForViews([surnameField])
-            customizedSubview?.helpLabel.text = "... and the surname"
-            customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: 60, width: 300, height: 80)
+            customWalkthroughView?.cutHolesForViews([surnameField])
+            customWalkthroughView?.helpLabel.text = "... and the surname"
+            customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: 60, width: 300, height: 80)
         } else if textField == surnameField {
-            walkthroughView?.cutHolesForViews([addressField])
-            walkthroughView?.dimColor = ProfileViewController.walkthroughDimColor
-            customizedSubview?.helpLabel.text = "... and finally your address!"
+            customWalkthroughView?.cutHolesForViews([addressField])
+            customWalkthroughView?.dimColor = ProfileViewController.walkthroughDimColor
+            customWalkthroughView?.helpLabel.text = "... and finally your address!"
         } else if textField == addressField {
-            walkthroughView?.dimColor = HomeViewController.walkthroughDimColor
-            walkthroughView?.removeAllHoles()
-            customizedSubview?.helpLabel.hidden = true
+            customWalkthroughView?.dimColor = HomeViewController.walkthroughDimColor
+            customWalkthroughView?.removeAllHoles()
+            customWalkthroughView?.helpLabel.hidden = true
             
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "profileWalkthroughComplete")
-            navigationController?.popToRootViewControllerAnimated(true)
+            
+            if ongoingWalkthrough {
+                navigationController?.popToRootViewControllerAnimated(true)
+            }
         }
     }
 

@@ -15,48 +15,37 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var switchView: UISwitch!
     
-    var customizedSubview: CustomWalkthroughSubview? {
-        if let subviews = walkthroughView?.subviews {
-            for subview in subviews {
-                if let customized = subview as? CustomWalkthroughSubview {
-                    return customized
-                }
-            }
-        }
-        return .None
-    }
+    var customWalkthroughView: CustomWalkthroughView? { return walkthroughView as? CustomWalkthroughView }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if let wt = attachToWalkthrough() {
-            wt.cutHolesForViews([segmented])
+        customWalkthroughView?.cutHolesForViews([segmented])
             
-            customizedSubview?.helpLabel.hidden = false
-            customizedSubview?.helpLabel.text = "Right, lets change that segmented control value"
-            customizedSubview?.helpLabel.frame = CGRect(x: customizedSubview!.center.x - 150, y: customizedSubview!.center.y + 60, width: 300, height: 80)
-            
-        }
+        customWalkthroughView?.helpLabel.hidden = false
+        customWalkthroughView?.helpLabel.text = "Right, lets change that segmented control value"
+        customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: customWalkthroughView!.center.y + 60, width: 300, height: 80)
     }
     
     @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
-        walkthroughView?.cutHolesForViews([slider])
-        customizedSubview?.helpLabel.text = "Cool, now drag the slider all the way to the right"
+        customWalkthroughView?.cutHolesForViews([slider])
+        customWalkthroughView?.helpLabel.text = "Cool, now drag the slider all the way to the right"
     }
     
     @IBAction func sliderValueChanged(sender: UISlider) {
         if sender.value == sender.maximumValue {
-            walkthroughView?.cutHolesForViews([switchView])
-            customizedSubview?.helpLabel.text = "To finish, change that switch value!"
+            customWalkthroughView?.cutHolesForViews([switchView])
+            customWalkthroughView?.helpLabel.text = "To finish, change that switch value!"
         }
     }
     
     @IBAction func switchValueChanged(sender: UISwitch) {
+        customWalkthroughView?.removeAllHoles()
+        customWalkthroughView?.helpLabel.hidden = true
+        
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: "settingsWalkthroughComplete")
         
-        if let wt = walkthroughView {
-            wt.removeAllHoles()
-            customizedSubview?.helpLabel.hidden = true
+        if ongoingWalkthrough {
             navigationController?.popToRootViewControllerAnimated(true)
         }
     }

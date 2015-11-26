@@ -7,22 +7,21 @@
 //
 
 import UIKit
+import SwiftyWalkthrough
 
-class CustomWalkthroughSubview: UIView {
+class CustomWalkthroughView: WalkthroughView {
     
     lazy var helpLabel: UILabel = self.makeHelpLabel()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
+    init() {
+        super.init(frame: CGRectZero)
+        
+        addSubview(helpLabel)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
-    }
-    
-    func setup() {
+        
         addSubview(helpLabel)
     }
     
