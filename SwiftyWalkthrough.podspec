@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftyWalkthrough"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "SwiftyWalkthrough is the easiest way to create a great walkthrough experience in your apps, powered by Swift."
   s.homepage     = "https://github.com/ruipfcosta/SwiftyWalkthrough"
   s.license      = { :type => "MIT", :file => "LICENSE" }
