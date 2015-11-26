@@ -24,7 +24,7 @@ SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 
 ##Preview
 
-See a live demo on [Appetize.io](https://appetize.io/embed/x9m9kxtq0eq6hgr7x4r91t0bgm?device=iphone6plus&scale=50&autoplay=false&orientation=portrait&deviceColor=black)
+![SwiftyWalkthrough demo](https://raw.githubusercontent.com/ruipfcosta/SwiftyWalkthrough/master/extras/demo.gif)
 
 ##Requirements
 
