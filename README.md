@@ -81,8 +81,26 @@ import SwiftyWalkthrough
 if let _ = walkthroughView {
 	// Attached to existing walkthrough
 } else {
-   initWalkthrough()
+   let myCustomWalkthrough = CustomWalkthroughView()
+   startWalkthrough(myCustomWalkthrough)
    // Walkthrough initialized
+}
+```
+
+###Check if there is an ongoing walkthrough
+
+Sometimes it is useful to know if there is an ongoing walkthrough (i.e. to adjust the logic on the view controllers). In that situation you can make use of the property ```ongoingWalkthrough```.
+
+```swift
+@IBAction func switchValueChanged(sender: UISwitch) {
+    customWalkthroughView?.removeAllHoles()
+    customWalkthroughView?.helpLabel.hidden = true
+	
+    NSUserDefaults.standardUserDefaults().setBool(true, forKey: "settingsWalkthroughComplete")
+	
+    if ongoingWalkthrough {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
 }
 ```
 
@@ -123,18 +141,18 @@ finishWalkthrough()
 
 ###Customization
 
-By default, SwiftyWalkthrough only provides the mechanism to block the access to your views and cut holes to access them, it's up to you to customize it to suit your needs. The best way to do so is by adding one or more subviews (i.e. images, label with instructions, etc) to `walkthroughView`. You can find more about this on the example provided with the library.
+By default, SwiftyWalkthrough only provides the mechanism to block the access to your views and cut holes to access them, it's up to you to customize it to suit your needs. You can do it by subclassing ```WalkthroughView``` and start the walkthrough with your custom walkthrough view. You can find more about this on the example provided with the library.
 
 ```swift
-func customizeWalkthroughView() {
-    if let wt = walkthroughView {
-        wt.addSubview(customizedSubview)
-        
-        let views = ["customizedSubview": customizedSubview]
-        wt.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[customizedSubview]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        wt.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[customizedSubview]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-    }
+import UIKit
+import SwiftyWalkthrough
+
+class CustomWalkthroughView: WalkthroughView {
+    // customize it
 }
+
+let myCustomWalkthrough = CustomWalkthroughView()
+startWalkthrough(myCustomWalkthrough)
 ```
 
 To specify the overlay's dim color at any time you just need to set the property `dimColor`:
