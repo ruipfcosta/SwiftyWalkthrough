@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3D23C891BB99B3100A13396 /* SwiftyWalkthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = B3D23C881BB99B3100A13396 /* SwiftyWalkthrough.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3D23C901BB99B3100A13396 /* SwiftyWalkthrough.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */; settings = {ASSET_TAGS = (); }; };
+		B3D23C901BB99B3100A13396 /* SwiftyWalkthrough.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */; };
 		B3D23C951BB99B3100A13396 /* SwiftyWalkthroughTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */; };
-		B3D23CA01BB99B7200A13396 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */; settings = {ASSET_TAGS = (); }; };
-		B3D23CA21BB99BB300A13396 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */; settings = {ASSET_TAGS = (); }; };
-		B3D23CF41BBA99B400A13396 /* UIViewController+Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23CF31BBA99B400A13396 /* UIViewController+Walkthrough.swift */; settings = {ASSET_TAGS = (); }; };
+		B3F4E9C91C7D2B7B000506A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3F4E9C41C7D2B7B000506A9 /* Info.plist */; };
+		B3F4E9CB1C7D2B7B000506A9 /* UIViewController+Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E9C61C7D2B7B000506A9 /* UIViewController+Walkthrough.swift */; };
+		B3F4E9CC1C7D2B7B000506A9 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E9C71C7D2B7B000506A9 /* ViewDescriptor.swift */; };
+		B3F4E9CD1C7D2B7B000506A9 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E9C81C7D2B7B000506A9 /* WalkthroughView.swift */; };
+		B3F4E9CE1C7D2BBE000506A9 /* SwiftyWalkthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F4E9C51C7D2B7B000506A9 /* SwiftyWalkthrough.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,14 +28,15 @@
 
 /* Begin PBXFileReference section */
 		B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyWalkthrough.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3D23C881BB99B3100A13396 /* SwiftyWalkthrough.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyWalkthrough.h; sourceTree = "<group>"; };
-		B3D23C8A1BB99B3100A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D23C8F1BB99B3100A13396 /* SwiftyWalkthroughTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyWalkthroughTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyWalkthroughTests.swift; sourceTree = "<group>"; };
 		B3D23C961BB99B3100A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
-		B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
-		B3D23CF31BBA99B400A13396 /* UIViewController+Walkthrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Walkthrough.swift"; sourceTree = "<group>"; };
+		B3F4E9C41C7D2B7B000506A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F4E9C51C7D2B7B000506A9 /* SwiftyWalkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyWalkthrough.h; sourceTree = "<group>"; };
+		B3F4E9C61C7D2B7B000506A9 /* UIViewController+Walkthrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Walkthrough.swift"; sourceTree = "<group>"; };
+		B3F4E9C71C7D2B7B000506A9 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
+		B3F4E9C81C7D2B7B000506A9 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		B3F4E9CF1C7D2DC3000506A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,8 @@
 		B3D23C7B1BB99B3100A13396 = {
 			isa = PBXGroup;
 			children = (
-				B3D23C871BB99B3100A13396 /* SwiftyWalkthrough */,
+				B3F4E9CF1C7D2DC3000506A9 /* UIKit.framework */,
+				B3F4E9C31C7D2B7B000506A9 /* Source */,
 				B3D23C931BB99B3100A13396 /* SwiftyWalkthroughTests */,
 			);
 			sourceTree = "<group>";
@@ -74,18 +77,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		B3D23C871BB99B3100A13396 /* SwiftyWalkthrough */ = {
-			isa = PBXGroup;
-			children = (
-				B3D23C881BB99B3100A13396 /* SwiftyWalkthrough.h */,
-				B3D23C8A1BB99B3100A13396 /* Info.plist */,
-				B3D23C9F1BB99B7200A13396 /* WalkthroughView.swift */,
-				B3D23CA11BB99BB300A13396 /* ViewDescriptor.swift */,
-				B3D23CF31BBA99B400A13396 /* UIViewController+Walkthrough.swift */,
-			);
-			path = SwiftyWalkthrough;
-			sourceTree = "<group>";
-		};
 		B3D23C931BB99B3100A13396 /* SwiftyWalkthroughTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +87,18 @@
 			path = SwiftyWalkthroughTests;
 			sourceTree = "<group>";
 		};
+		B3F4E9C31C7D2B7B000506A9 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B3F4E9C41C7D2B7B000506A9 /* Info.plist */,
+				B3F4E9C51C7D2B7B000506A9 /* SwiftyWalkthrough.h */,
+				B3F4E9C61C7D2B7B000506A9 /* UIViewController+Walkthrough.swift */,
+				B3F4E9C71C7D2B7B000506A9 /* ViewDescriptor.swift */,
+				B3F4E9C81C7D2B7B000506A9 /* WalkthroughView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -103,7 +106,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D23C891BB99B3100A13396 /* SwiftyWalkthrough.h in Headers */,
+				B3F4E9CE1C7D2BBE000506A9 /* SwiftyWalkthrough.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +155,7 @@
 		B3D23C7C1BB99B3100A13396 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Rui Costa";
 				TargetAttributes = {
@@ -187,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F4E9C91C7D2B7B000506A9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,9 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D23CA01BB99B7200A13396 /* WalkthroughView.swift in Sources */,
-				B3D23CF41BBA99B400A13396 /* UIViewController+Walkthrough.swift in Sources */,
-				B3D23CA21BB99BB300A13396 /* ViewDescriptor.swift in Sources */,
+				B3F4E9CB1C7D2B7B000506A9 /* UIViewController+Walkthrough.swift in Sources */,
+				B3F4E9CC1C7D2B7B000506A9 /* ViewDescriptor.swift in Sources */,
+				B3F4E9CD1C7D2B7B000506A9 /* WalkthroughView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +330,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyWalkthrough/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -345,7 +349,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftyWalkthrough/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
