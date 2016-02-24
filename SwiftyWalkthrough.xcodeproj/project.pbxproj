@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B35F8CB91C7DE9620016E6D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35F8CB41C7DE9620016E6D6 /* Info.plist */; };
+		B35F8CBA1C7DE9620016E6D6 /* SwiftyWalkthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = B35F8CB51C7DE9620016E6D6 /* SwiftyWalkthrough.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B35F8CBB1C7DE9620016E6D6 /* UIViewController+Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8CB61C7DE9620016E6D6 /* UIViewController+Walkthrough.swift */; };
+		B35F8CBC1C7DE9620016E6D6 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8CB71C7DE9620016E6D6 /* ViewDescriptor.swift */; };
+		B35F8CBD1C7DE9620016E6D6 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8CB81C7DE9620016E6D6 /* WalkthroughView.swift */; };
 		B3D23C901BB99B3100A13396 /* SwiftyWalkthrough.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */; };
 		B3D23C951BB99B3100A13396 /* SwiftyWalkthroughTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */; };
-		B3F4E9C91C7D2B7B000506A9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3F4E9C41C7D2B7B000506A9 /* Info.plist */; };
-		B3F4E9CB1C7D2B7B000506A9 /* UIViewController+Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E9C61C7D2B7B000506A9 /* UIViewController+Walkthrough.swift */; };
-		B3F4E9CC1C7D2B7B000506A9 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E9C71C7D2B7B000506A9 /* ViewDescriptor.swift */; };
-		B3F4E9CD1C7D2B7B000506A9 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4E9C81C7D2B7B000506A9 /* WalkthroughView.swift */; };
-		B3F4E9CE1C7D2BBE000506A9 /* SwiftyWalkthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F4E9C51C7D2B7B000506A9 /* SwiftyWalkthrough.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B35F8CB41C7DE9620016E6D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35F8CB51C7DE9620016E6D6 /* SwiftyWalkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyWalkthrough.h; sourceTree = "<group>"; };
+		B35F8CB61C7DE9620016E6D6 /* UIViewController+Walkthrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Walkthrough.swift"; sourceTree = "<group>"; };
+		B35F8CB71C7DE9620016E6D6 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
+		B35F8CB81C7DE9620016E6D6 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyWalkthrough.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23C8F1BB99B3100A13396 /* SwiftyWalkthroughTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyWalkthroughTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyWalkthroughTests.swift; sourceTree = "<group>"; };
 		B3D23C961BB99B3100A13396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3F4E9C41C7D2B7B000506A9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B3F4E9C51C7D2B7B000506A9 /* SwiftyWalkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyWalkthrough.h; sourceTree = "<group>"; };
-		B3F4E9C61C7D2B7B000506A9 /* UIViewController+Walkthrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Walkthrough.swift"; sourceTree = "<group>"; };
-		B3F4E9C71C7D2B7B000506A9 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
-		B3F4E9C81C7D2B7B000506A9 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		B3F4E9CF1C7D2DC3000506A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -58,11 +58,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B35F8CB31C7DE9620016E6D6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B35F8CB41C7DE9620016E6D6 /* Info.plist */,
+				B35F8CB51C7DE9620016E6D6 /* SwiftyWalkthrough.h */,
+				B35F8CB61C7DE9620016E6D6 /* UIViewController+Walkthrough.swift */,
+				B35F8CB71C7DE9620016E6D6 /* ViewDescriptor.swift */,
+				B35F8CB81C7DE9620016E6D6 /* WalkthroughView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		B3D23C7B1BB99B3100A13396 = {
 			isa = PBXGroup;
 			children = (
 				B3F4E9CF1C7D2DC3000506A9 /* UIKit.framework */,
-				B3F4E9C31C7D2B7B000506A9 /* Source */,
+				B35F8CB31C7DE9620016E6D6 /* Sources */,
 				B3D23C931BB99B3100A13396 /* SwiftyWalkthroughTests */,
 			);
 			sourceTree = "<group>";
@@ -87,18 +99,6 @@
 			path = SwiftyWalkthroughTests;
 			sourceTree = "<group>";
 		};
-		B3F4E9C31C7D2B7B000506A9 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				B3F4E9C41C7D2B7B000506A9 /* Info.plist */,
-				B3F4E9C51C7D2B7B000506A9 /* SwiftyWalkthrough.h */,
-				B3F4E9C61C7D2B7B000506A9 /* UIViewController+Walkthrough.swift */,
-				B3F4E9C71C7D2B7B000506A9 /* ViewDescriptor.swift */,
-				B3F4E9C81C7D2B7B000506A9 /* WalkthroughView.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -106,7 +106,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F4E9CE1C7D2BBE000506A9 /* SwiftyWalkthrough.h in Headers */,
+				B35F8CBA1C7DE9620016E6D6 /* SwiftyWalkthrough.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F4E9C91C7D2B7B000506A9 /* Info.plist in Resources */,
+				B35F8CB91C7DE9620016E6D6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,9 +208,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F4E9CB1C7D2B7B000506A9 /* UIViewController+Walkthrough.swift in Sources */,
-				B3F4E9CC1C7D2B7B000506A9 /* ViewDescriptor.swift in Sources */,
-				B3F4E9CD1C7D2B7B000506A9 /* WalkthroughView.swift in Sources */,
+				B35F8CBB1C7DE9620016E6D6 /* UIViewController+Walkthrough.swift in Sources */,
+				B35F8CBC1C7DE9620016E6D6 /* ViewDescriptor.swift in Sources */,
+				B35F8CBD1C7DE9620016E6D6 /* WalkthroughView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +330,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -349,7 +349,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
