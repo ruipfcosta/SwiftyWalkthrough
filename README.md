@@ -10,7 +10,7 @@
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 SwiftyWalkthrough is a library for creating great walkthrough experiences in your apps, written in Swift. 
-You can use the library to allow users to navigate and explore your app, step by step, in a predefined way controlled by you.
+You can use the library to allow users to navigate and explore your app, step by step, in a predefined way controlled by you. If you're interested take a look at the resulting article [SwiftyWalkthrough — adding a great walkthrough experience to your iOS apps](https://medium.com/@ruipfcosta/swiftywalkthrough-adding-a-great-walkthrough-experience-to-your-ios-apps-be3cc3523b08).
 
 SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 
