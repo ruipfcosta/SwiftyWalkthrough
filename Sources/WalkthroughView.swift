@@ -113,7 +113,7 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
     
     func registerForOrientationChanges() {
         UIDevice.currentDevice().beginGeneratingDeviceOrientationNotifications()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "orientationChanged", name: UIDeviceOrientationDidChangeNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(WalkthroughView.orientationChanged), name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     
     func unregisterFromOrientationChanges() {
