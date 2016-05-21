@@ -10,11 +10,17 @@ import UIKit
 
 extension UIViewController: WalkthroughViewDelegate {
 
-    public var rootController: UIViewController? { return UIApplication.sharedApplication().delegate?.window??.rootViewController }
+    public var rootController: UIViewController? {
+        return UIApplication.sharedApplication().delegate?.window??.rootViewController
+    }
     
-    public var walkthroughView: WalkthroughView? { return attachToWalkthrough() }
+    public var walkthroughView: WalkthroughView? {
+        return attachToWalkthrough()
+    }
     
-    public var ongoingWalkthrough: Bool { return walkthroughView != .None }
+    public var ongoingWalkthrough: Bool {
+        return walkthroughView != .None
+    }
     
     public func makeWalkthroughView() -> WalkthroughView {
         let v = WalkthroughView()

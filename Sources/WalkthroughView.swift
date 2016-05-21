@@ -126,15 +126,14 @@ private let defaultDimColor = UIColor.blackColor().colorWithAlphaComponent(0.7).
     }
     
     func removeOverlaySublayers() {
-        if let overlaySublayers = overlayView.layer.sublayers {
-            for l in overlaySublayers {
-                l.removeFromSuperlayer()
-            }
-        }
+        guard let overlaySublayers = overlayView.layer.sublayers else { return }
+        
+        overlaySublayers.forEach { $0.removeFromSuperlayer() }
     }
     
     public func cutHolesForViews(views: [UIView]) {
-        cutHolesForViewDescriptors(views.map { ViewDescriptor(view: $0) })
+        let descriptors = views.map(ViewDescriptor.init)
+        cutHolesForViewDescriptors(descriptors)
     }
     
     public func cutHolesForViewDescriptors(views: [ViewDescriptor]) {
