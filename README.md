@@ -26,49 +26,6 @@ SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 
 ![SwiftyWalkthrough demo](https://raw.githubusercontent.com/ruipfcosta/SwiftyWalkthrough/master/extras/demo.gif)
 
-##Requirements
-
-* iOS 8.0+
-* Xcode 7.0+
-
-##Instalation
-
-###CocoaPods
-
-[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
-
-```bash
-$ gem install cocoapods
-```
-
-To integrate SwiftyWalkthrough into your Xcode project using CocoaPods, include this in your Podfile:
-
-```ruby
-platform :ios, '8.0'
-use_frameworks!
-
-pod 'SwiftyWalkthrough'
-```
-
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
-
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
-
-```bash
-$ brew update
-$ brew install carthage
-```
-
-To integrate SwiftyWalkthrough into your Xcode project using Carthage, specify it in your `Cartfile`:
-
-```ogdl
-github "ruipfcosta/SwiftyWalkthrough"
-```
-
-Run `carthage` to build the framework and drag the built `SwiftyWalkthrough.framework` into your Xcode project.
-
 ##Usage
 
 SwiftyWalkthrough works by adding an overlay on top of your screen, blocking the access to your views. You can then control which views should be made accessible and when.
@@ -181,9 +138,48 @@ func willInteractWithView(view: UIView) {
 
 > Points that lie outside the receiver’s bounds are never reported as hits, even if they actually lie within one of the receiver’s subviews. This can occur if the current view’s clipsToBounds property is set to false and the affected subview extends beyond the view’s bounds.
 
-## Using SwiftyWalkthrough in your app?
+##Requirements
 
-Let me know about it and I'll mention it here!
+* iOS 8.0+
+* Xcode 7.0+
+
+##Instalation
+
+###CocoaPods
+
+[CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate SwiftyWalkthrough into your Xcode project using CocoaPods, include this in your Podfile:
+
+```ruby
+platform :ios, '8.0'
+use_frameworks!
+
+pod 'SwiftyWalkthrough'
+```
+
+### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate SwiftyWalkthrough into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "ruipfcosta/SwiftyWalkthrough"
+```
+
+Run `carthage` to build the framework and drag the built `SwiftyWalkthrough.framework` into your Xcode project.
 
 ## Credits
 
