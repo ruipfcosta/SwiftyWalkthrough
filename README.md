@@ -24,7 +24,11 @@ SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 
 ##Preview
 
+SwiftyWalkthrough provides you with a framework to build your walkthrough experience, giving you full control over what you want to achieve. The following examples were build using SwiftyWalkthrough:
+
 ![SwiftyWalkthrough demo](https://raw.githubusercontent.com/ruipfcosta/SwiftyWalkthrough/master/extras/demo.gif)
+
+![MyChoicePad demo](https://raw.githubusercontent.com/ruipfcosta/SwiftyWalkthrough/master/extras/demo-mcp.gif)
 
 ##Usage
 
