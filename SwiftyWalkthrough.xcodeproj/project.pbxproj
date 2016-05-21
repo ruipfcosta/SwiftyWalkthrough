@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B35F8CB91C7DE9620016E6D6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B35F8CB41C7DE9620016E6D6 /* Info.plist */; };
 		B35F8CBA1C7DE9620016E6D6 /* SwiftyWalkthrough.h in Headers */ = {isa = PBXBuildFile; fileRef = B35F8CB51C7DE9620016E6D6 /* SwiftyWalkthrough.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B35F8CBB1C7DE9620016E6D6 /* UIViewController+Walkthrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8CB61C7DE9620016E6D6 /* UIViewController+Walkthrough.swift */; };
 		B35F8CBC1C7DE9620016E6D6 /* ViewDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35F8CB71C7DE9620016E6D6 /* ViewDescriptor.swift */; };
@@ -27,11 +26,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B35F8CB41C7DE9620016E6D6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B35F8CB51C7DE9620016E6D6 /* SwiftyWalkthrough.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyWalkthrough.h; sourceTree = "<group>"; };
 		B35F8CB61C7DE9620016E6D6 /* UIViewController+Walkthrough.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Walkthrough.swift"; sourceTree = "<group>"; };
 		B35F8CB71C7DE9620016E6D6 /* ViewDescriptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDescriptor.swift; sourceTree = "<group>"; };
 		B35F8CB81C7DE9620016E6D6 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		B394A1AF1CF08A7B00ABAC68 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D23C851BB99B3100A13396 /* SwiftyWalkthrough.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyWalkthrough.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23C8F1BB99B3100A13396 /* SwiftyWalkthroughTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftyWalkthroughTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D23C941BB99B3100A13396 /* SwiftyWalkthroughTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyWalkthroughTests.swift; sourceTree = "<group>"; };
@@ -61,7 +60,7 @@
 		B35F8CB31C7DE9620016E6D6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B35F8CB41C7DE9620016E6D6 /* Info.plist */,
+				B394A1AF1CF08A7B00ABAC68 /* Info.plist */,
 				B35F8CB51C7DE9620016E6D6 /* SwiftyWalkthrough.h */,
 				B35F8CB61C7DE9620016E6D6 /* UIViewController+Walkthrough.swift */,
 				B35F8CB71C7DE9620016E6D6 /* ViewDescriptor.swift */,
@@ -156,7 +155,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Rui Costa";
 				TargetAttributes = {
 					B3D23C841BB99B3100A13396 = {
@@ -190,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B35F8CB91C7DE9620016E6D6 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
