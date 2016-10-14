@@ -43,7 +43,7 @@
                     <connections>
                         <outlet property="showProfileButton" destination="g96-1C-57g" id="qfN-Ab-g8k"/>
                         <outlet property="showSettingsButton" destination="He6-Qt-4Wh" id="eAv-Af-gch"/>
-                        <segue destination="H2h-Wa-J3K" kind="show" identifier="settingsSegue" id="flR-Cc-9P3"/>
+                        <segue destination="H2h-Wa-J3K" kind="presentation" identifier="settingsSegue" id="flR-Cc-9P3"/>
                         <segue destination="ZiM-AO-IG2" kind="show" identifier="profileSegue" id="ozf-kD-DjD"/>
                     </connections>
                 </viewController>

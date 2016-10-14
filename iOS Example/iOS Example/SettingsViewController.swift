@@ -46,7 +46,7 @@ class SettingsViewController: UIViewController {
         UserDefaults.standard.set(true, forKey: "settingsWalkthroughComplete")
         
         if ongoingWalkthrough {
-            navigationController?.popToRootViewController(animated: true)
+            dismiss(animated: true)
         }
     }
     
