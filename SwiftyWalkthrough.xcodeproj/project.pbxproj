@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					B3D23C841BB99B3100A13396 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					B3D23C8E1BB99B3100A13396 = {
 						CreatedOnToolsVersion = 7.0;
@@ -336,6 +337,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -354,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = pt.ruicosta.SwiftyWalkthrough;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-@objc public class ViewDescriptor: NSObject {
+@objc open class ViewDescriptor: NSObject {
     
     let view: UIView
     let extraPaddingX: CGFloat

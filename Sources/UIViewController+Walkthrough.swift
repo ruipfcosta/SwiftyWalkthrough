@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController: WalkthroughViewDelegate {
 
     public var rootController: UIViewController? {
-        let rootController = UIApplication.sharedApplication().delegate?.window??.rootViewController
+        let rootController = UIApplication.shared.delegate?.window??.rootViewController
         return rootController?.presentedViewController ?? rootController
     }
     
@@ -20,7 +20,7 @@ extension UIViewController: WalkthroughViewDelegate {
     }
     
     public var ongoingWalkthrough: Bool {
-        return walkthroughView != .None
+        return walkthroughView != .none
     }
     
     public func makeWalkthroughView() -> WalkthroughView {
@@ -29,7 +29,7 @@ extension UIViewController: WalkthroughViewDelegate {
         return v
     }
     
-    public func startWalkthrough(walkthroughView: WalkthroughView) {
+    public func startWalkthrough(_ walkthroughView: WalkthroughView) {
         if ongoingWalkthrough {
             finishWalkthrough()
         }
@@ -39,10 +39,10 @@ extension UIViewController: WalkthroughViewDelegate {
         let views = ["walkthroughView": walkthroughView]
         
         rootController?.view.addSubview(walkthroughView)
-        rootController?.view.bringSubviewToFront(walkthroughView)
+        rootController?.view.bringSubview(toFront: walkthroughView)
         
-        rootController?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        rootController?.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        rootController?.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        rootController?.view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
         rootController?.view.setNeedsLayout()
     }
     
@@ -55,7 +55,7 @@ extension UIViewController: WalkthroughViewDelegate {
                 }
             }
         }
-        return .None
+        return .none
     }
     
     public func finishWalkthrough() {

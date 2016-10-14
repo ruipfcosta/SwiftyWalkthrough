@@ -17,36 +17,36 @@ class SettingsViewController: UIViewController {
     
     var customWalkthroughView: CustomWalkthroughView? { return walkthroughView as? CustomWalkthroughView }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         customWalkthroughView?.cutHolesForViews([segmented])
             
-        customWalkthroughView?.helpLabel.hidden = false
+        customWalkthroughView?.helpLabel.isHidden = false
         customWalkthroughView?.helpLabel.text = "Right, lets change that segmented control value"
         customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: customWalkthroughView!.center.y + 60, width: 300, height: 80)
     }
     
-    @IBAction func segmentedValueChanged(sender: UISegmentedControl) {
+    @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
         customWalkthroughView?.cutHolesForViews([slider])
         customWalkthroughView?.helpLabel.text = "Cool, now drag the slider all the way to the right"
     }
     
-    @IBAction func sliderValueChanged(sender: UISlider) {
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
         if sender.value == sender.maximumValue {
             customWalkthroughView?.cutHolesForViews([switchView])
             customWalkthroughView?.helpLabel.text = "To finish, change that switch value!"
         }
     }
     
-    @IBAction func switchValueChanged(sender: UISwitch) {
+    @IBAction func switchValueChanged(_ sender: UISwitch) {
         customWalkthroughView?.removeAllHoles()
-        customWalkthroughView?.helpLabel.hidden = true
+        customWalkthroughView?.helpLabel.isHidden = true
         
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "settingsWalkthroughComplete")
+        UserDefaults.standard.set(true, forKey: "settingsWalkthroughComplete")
         
         if ongoingWalkthrough {
-            navigationController?.popToRootViewControllerAnimated(true)
+            navigationController?.popToRootViewController(animated: true)
         }
     }
     
