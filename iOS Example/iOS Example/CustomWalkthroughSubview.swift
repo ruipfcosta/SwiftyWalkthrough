@@ -14,7 +14,7 @@ class CustomWalkthroughView: WalkthroughView {
     lazy var helpLabel: UILabel = self.makeHelpLabel()
     
     init() {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         
         addSubview(helpLabel)
     }
@@ -27,9 +27,9 @@ class CustomWalkthroughView: WalkthroughView {
     
     func makeHelpLabel() -> UILabel {
         let l = UILabel()
-        l.backgroundColor = UIColor.redColor()
-        l.textColor = UIColor.whiteColor()
-        l.textAlignment = .Center
+        l.backgroundColor = UIColor.red
+        l.textColor = UIColor.white
+        l.textAlignment = .center
         l.numberOfLines = 0
         
         return l

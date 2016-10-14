@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JIt-cx-Xpl">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JIt-cx-Xpl">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--SwiftyWalkthrough-->
@@ -14,22 +15,20 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g96-1C-57g">
-                                <rect key="frame" x="263" y="285" width="75" height="30"/>
-                                <animations/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g96-1C-57g">
+                                <frame key="frameInset" minX="263" minY="285" width="75" height="30"/>
                                 <state key="normal" title="Edit Profile">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="profilePressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fjX-RI-D5t"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="g96-1C-57g" secondAttribute="centerX" id="SWg-DP-1YZ"/>
                             <constraint firstAttribute="centerY" secondItem="g96-1C-57g" secondAttribute="centerY" id="Z4z-wp-rmC"/>
@@ -62,19 +61,17 @@
                         <viewControllerLayoutGuide type="bottom" id="tWd-g0-00E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kmi-AP-598">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A slider!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cee-YH-aM1">
-                                <rect key="frame" x="16" y="151" width="166" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="151" width="166" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m9q-jF-UVq">
-                                <rect key="frame" x="16" y="101" width="123" height="29"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="101" width="123" height="29"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
@@ -84,29 +81,25 @@
                                 </connections>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="eDA-z3-eqQ">
-                                <rect key="frame" x="14" y="180" width="269" height="31"/>
-                                <animations/>
+                                <frame key="frameInset" minX="14" minY="180" width="269" height="31"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="H2h-Wa-J3K" eventType="valueChanged" id="6y8-6a-8Ln"/>
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eOr-mc-wqO">
-                                <rect key="frame" x="16" y="265" width="51" height="31"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="265" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchValueChanged:" destination="H2h-Wa-J3K" eventType="valueChanged" id="Zqy-2S-KSJ"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A switch!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="828-la-4IG">
-                                <rect key="frame" x="16" y="236" width="70" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="236" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A segmented control!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5J-x2-Pzg">
-                                <rect key="frame" x="16" y="72" width="188" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="72" width="188" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="7lS-E5-iJL"/>
                                 </constraints>
@@ -115,8 +108,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Cee-YH-aM1" firstAttribute="top" secondItem="m9q-jF-UVq" secondAttribute="bottom" constant="22" id="8sy-FC-J80"/>
                             <constraint firstItem="m9q-jF-UVq" firstAttribute="top" secondItem="c5J-x2-Pzg" secondAttribute="bottom" constant="8" id="JAi-XN-KED"/>
@@ -151,12 +143,11 @@
                         <viewControllerLayoutGuide type="bottom" id="t2G-Hr-ibC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uYW-lI-g7g">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-Kf-rqW">
-                                <rect key="frame" x="16" y="229" width="204" height="30"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="229" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="Kmx-38-Dcq"/>
                                 </constraints>
@@ -164,15 +155,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVG-BS-1J2">
-                                <rect key="frame" x="89" y="200" width="46" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="89" minY="200" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOJ-bg-59K">
-                                <rect key="frame" x="16" y="305" width="204" height="30"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="305" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="ILk-FQ-rMo"/>
                                 </constraints>
@@ -180,15 +169,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Surname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3i-1k-rcK">
-                                <rect key="frame" x="77" y="281" width="70" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="77" minY="281" width="70" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="adB-Vi-vhH">
-                                <rect key="frame" x="16" y="381" width="204" height="30"/>
-                                <animations/>
+                                <frame key="frameInset" minX="16" minY="381" width="204" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="204" id="ggM-dj-grb"/>
                                 </constraints>
@@ -196,30 +183,27 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcX-ub-3Q6">
-                                <rect key="frame" x="80" y="352" width="64" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="80" minY="352" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RI4-zz-9Tb">
-                                <rect key="frame" x="279" y="20" width="42" height="21"/>
-                                <animations/>
+                                <frame key="frameInset" minX="279" minY="20" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Pik-F3-Zia">
-                                <rect key="frame" x="52" y="72" width="120" height="120"/>
-                                <animations/>
+                                <frame key="frameInset" minX="52" minY="72" width="120" height="120"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Nwv-f5-psY" appends="YES" id="PyR-Px-Qno"/>
                                 </connections>
                             </imageView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HcX-ub-3Q6" firstAttribute="centerX" secondItem="uYW-lI-g7g" secondAttribute="centerX" id="9Eg-Vd-y7e"/>
                             <constraint firstItem="O3i-1k-rcK" firstAttribute="centerX" secondItem="uYW-lI-g7g" secondAttribute="centerX" id="9Zw-G2-OfG"/>
@@ -267,7 +251,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wpZ-Pt-HU8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

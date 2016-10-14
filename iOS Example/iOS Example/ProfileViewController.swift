@@ -16,7 +16,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var surnameField: UITextField!
     @IBOutlet weak var addressField: UITextField!
     
-    static var walkthroughDimColor = UIColor.redColor().colorWithAlphaComponent(0.7).CGColor
+    static var walkthroughDimColor = UIColor.red.withAlphaComponent(0.7).cgColor
     
     var customWalkthroughView: CustomWalkthroughView? { return walkthroughView as? CustomWalkthroughView }
         
@@ -28,41 +28,41 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         addressField.delegate = self
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         customWalkthroughView?.cutHolesForViewDescriptors([ViewDescriptor(view: photo, extraPaddingX: 20, extraPaddingY: 20, cornerRadius: 80)])
         
-        customWalkthroughView?.helpLabel.hidden = false
-        customWalkthroughView?.helpLabel.backgroundColor = UIColor.blueColor()
+        customWalkthroughView?.helpLabel.isHidden = false
+        customWalkthroughView?.helpLabel.backgroundColor = UIColor.blue
         customWalkthroughView?.helpLabel.text = "Ok, lets play with the colors too! Tap the image to start."
         customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: customWalkthroughView!.center.y + 60, width: 300, height: 80)
     }
     
-    @IBAction func onTapImage(sender: UITapGestureRecognizer) {
+    @IBAction func onTapImage(_ sender: UITapGestureRecognizer) {
         customWalkthroughView?.cutHolesForViews([nameField])
-        customWalkthroughView?.dimColor = UIColor.blueColor().colorWithAlphaComponent(0.5).CGColor
+        customWalkthroughView?.dimColor = UIColor.blue.withAlphaComponent(0.5).cgColor
         
-        customWalkthroughView?.helpLabel.backgroundColor = UIColor.blackColor()
+        customWalkthroughView?.helpLabel.backgroundColor = UIColor.black
         customWalkthroughView?.helpLabel.text = "Now tell us your name"
         customWalkthroughView?.helpLabel.frame = CGRect(x: customWalkthroughView!.center.x - 150, y: customWalkthroughView!.center.y + 60, width: 300, height: 80)
     }
     
     // MARK: - UITextFieldDelegate
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if let input = textField.text {
             return !input.isEmpty
         }
         return false
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == nameField {
             customWalkthroughView?.cutHolesForViews([surnameField])
             customWalkthroughView?.helpLabel.text = "... and the surname"
@@ -74,12 +74,12 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         } else if textField == addressField {
             customWalkthroughView?.dimColor = HomeViewController.walkthroughDimColor
             customWalkthroughView?.removeAllHoles()
-            customWalkthroughView?.helpLabel.hidden = true
+            customWalkthroughView?.helpLabel.isHidden = true
             
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "profileWalkthroughComplete")
+            UserDefaults.standard.set(true, forKey: "profileWalkthroughComplete")
             
             if ongoingWalkthrough {
-                navigationController?.popToRootViewControllerAnimated(true)
+                navigationController?.popToRootViewController(animated: true)
             }
         }
     }
