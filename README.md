@@ -1,4 +1,4 @@
-#SwiftyWalkthrough
+# SwiftyWalkthrough
 
 [![Platform](http://img.shields.io/badge/platform-ios-blue.svg?style=flat
 )](https://developer.apple.com/iphone/index.action)
@@ -14,7 +14,7 @@ You can use the library to allow users to navigate and explore your app, step by
 
 SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 
-##Features
+## Features
 
 - [x] Add walkthroughs to your app with little effort: you don't need to change anything in your view hierarchy.
 - [x] SwiftyWalkthrough is great for onboarding, walkthroughs, tutorials, etc.
@@ -22,7 +22,7 @@ SwiftyWalkthrough was developed at [Insane Logic](http://www.insanelogic.co.uk).
 - [x] Take users through a series of steps, even across multiple screens.
 - [x] Is simple!
 
-##Preview
+## Preview
 
 SwiftyWalkthrough provides you with a framework to build your walkthrough experience, giving you full control over what you want to achieve. The following examples were built using SwiftyWalkthrough:
 
@@ -30,11 +30,11 @@ SwiftyWalkthrough provides you with a framework to build your walkthrough experi
 
 ![MyChoicePad demo](https://raw.githubusercontent.com/ruipfcosta/SwiftyWalkthrough/master/extras/demo-mcp.gif)
 
-##Usage
+## Usage
 
 SwiftyWalkthrough works by adding an overlay on top of your screen, blocking the access to your views. You can then control which views should be made accessible and when.
 
-###Initialize a walkthrough or attach to an existing one
+### Initialize a walkthrough or attach to an existing one
 
 ```swift
 import SwiftyWalkthrough
@@ -48,7 +48,7 @@ if let _ = walkthroughView {
 }
 ```
 
-###Check if there is an ongoing walkthrough
+### Check if there is an ongoing walkthrough
 
 Sometimes it is useful to know if there is an ongoing walkthrough (i.e. to adjust the logic on the view controllers). In that situation you can make use of the property ```ongoingWalkthrough```.
 
@@ -65,7 +65,7 @@ Sometimes it is useful to know if there is an ongoing walkthrough (i.e. to adjus
 }
 ```
 
-###Cut holes on the overlay for the views you want to expose
+### Cut holes on the overlay for the views you want to expose
 
 ```swift
 @IBOutlet weak var nameField: UITextField!
@@ -88,19 +88,19 @@ let descriptors = [
 walkthroughView?.cutHolesForViewDescriptors(descriptors)
 ```
 
-###Remove the holes
+### Remove the holes
 
 ```swift
 walkthroughView?.removeAllHoles()
 ```
 
-###Close the walkthrough when it is finished
+### Close the walkthrough when it is finished
 
 ```swift
 finishWalkthrough()
 ```
 
-###Customization
+### Customization
 
 By default, SwiftyWalkthrough only provides the mechanism to block the access to your views and cut holes to access them, it's up to you to customize it to suit your needs. You can do it by subclassing ```WalkthroughView``` and start the walkthrough with your custom walkthrough view. You can find more about this on the example provided with the library.
 
@@ -122,7 +122,7 @@ To specify the overlay's dim color at any time you just need to set the property
 walkthroughView?.dimColor = UIColor.redColor().colorWithAlphaComponent(0.7).CGColor
 ```
 
-###WalkthroughViewDelegate
+### WalkthroughViewDelegate
 
 If for some reason you need to be notified right before the interaction with an exposed view, you can provide an implementation for the `willInteractWithView` method:
 
@@ -142,14 +142,14 @@ func willInteractWithView(view: UIView) {
 
 > Points that lie outside the receiver’s bounds are never reported as hits, even if they actually lie within one of the receiver’s subviews. This can occur if the current view’s clipsToBounds property is set to false and the affected subview extends beyond the view’s bounds.
 
-##Requirements
+## Requirements
 
 * iOS 8.0+
 * Xcode 7.0+
 
-##Instalation
+## Instalation
 
-###CocoaPods
+### CocoaPods
 
 [CocoaPods](https://cocoapods.org/) is a dependency manager for Cocoa projects. You can install it with the following command:
 
