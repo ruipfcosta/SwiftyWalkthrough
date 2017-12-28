@@ -121,7 +121,7 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
-    func orientationChanged() {
+    @objc func orientationChanged() {
         setNeedsDisplay()
     }
     
