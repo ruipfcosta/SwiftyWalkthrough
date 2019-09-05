@@ -56,7 +56,7 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
             let convertedFrame = descriptor.view.superview?.convert(currentView.frame, to: overlayView)
             
             if let cf = convertedFrame {
-                let highlightedFrame = cf.insetBy(dx: -descriptor.extraPaddingX, dy: -descriptor.extraPaddingY)
+                let highlightedFrame = UIEdgeInsetsInsetRect(cf, descriptor.rectEdges)
                 let transparentPath =  UIBezierPath(roundedRect: highlightedFrame, cornerRadius: descriptor.cornerRadius)
                 overlayPath.append(transparentPath)
             }
