@@ -36,10 +36,10 @@ extension UIViewController: WalkthroughViewDelegate {
         let views = ["walkthroughView": walkthroughView]
         
         window.addSubview(walkthroughView)
-        window.bringSubview(toFront: walkthroughView)
+        window.bringSubviewToFront(walkthroughView)
         
-        window.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        window.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[walkthroughView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        window.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[walkthroughView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
+        window.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[walkthroughView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
         window.setNeedsLayout()
     }
     

@@ -44,7 +44,7 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
     
     override open func draw(_ rect: CGRect) {
         super.draw(rect)
-        superview?.bringSubview(toFront: self)
+        superview?.bringSubviewToFront(self)
         
         removeOverlaySublayers()
         
@@ -56,7 +56,7 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
             let convertedFrame = descriptor.view.superview?.convert(currentView.frame, to: overlayView)
             
             if let cf = convertedFrame {
-                let highlightedFrame = UIEdgeInsetsInsetRect(cf, descriptor.rectEdges)
+                let highlightedFrame = cf.inset(by: descriptor.rectEdges)
                 let transparentPath =  UIBezierPath(roundedRect: highlightedFrame, cornerRadius: descriptor.cornerRadius)
                 overlayPath.append(transparentPath)
             }
@@ -64,7 +64,7 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
         
         let fillLayer = CAShapeLayer()
         fillLayer.path = overlayPath.cgPath
-        fillLayer.fillRule = kCAFillRuleEvenOdd
+        fillLayer.fillRule = .evenOdd
         fillLayer.fillColor = dimColor
         
         overlayView.layer.addSublayer(fillLayer)
@@ -100,8 +100,8 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
     func setupConstraints() {
         let views = ["overlayView": overlayView]
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[overlayView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[overlayView]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[overlayView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[overlayView]|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
     }
     
     func makeOverlay() -> UIView {
@@ -113,12 +113,12 @@ private let defaultDimColor = UIColor.black.withAlphaComponent(0.7).cgColor
     
     func registerForOrientationChanges() {
         UIDevice.current.beginGeneratingDeviceOrientationNotifications()
-        NotificationCenter.default.addObserver(self, selector: #selector(WalkthroughView.orientationChanged), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(WalkthroughView.orientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     func unregisterFromOrientationChanges() {
         UIDevice.current.endGeneratingDeviceOrientationNotifications()
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     @objc func orientationChanged() {
